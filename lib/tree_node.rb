@@ -15,5 +15,7 @@ class PolyTreeNode
             @parent = parent_val
             parent_val.children << self
         end
+
+        @parent
     end
 end

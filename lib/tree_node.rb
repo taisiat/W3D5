@@ -15,7 +15,15 @@ class PolyTreeNode
             @parent = parent_val
             parent_val.children << self
         end
-
-        @parent
+        if parent_val == nil
+            @parent = nil
+        end
     end
+
+    def add_child(child)
+        if !@children.include?(child)
+            @children << child
+            child.parent = self
+        end
+    end    
 end
